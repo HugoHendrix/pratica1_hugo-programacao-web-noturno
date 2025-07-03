@@ -23,6 +23,9 @@
   <!-- Link para as folhas de estilo CSS -->
   <link rel="stylesheet" href="./css/index.css">
 
+  <!-- Link para o favicon -->
+  <link rel="shortcut icon" href="./images/imagens-site/favicon.png" type="image/x-icon">
+
   <!-- Título da página que aparece na aba do navegador -->
   <title>Padaria do Bairro - Produtos Frescos e Tradicionais</title>
 
@@ -38,6 +41,7 @@
   <div class="banner-images"></div>
   <!-- CABEÇALHO DA PÁGINA -->
   <header>
+
     <!-- Título principal da página (H1) - deve haver apenas um por página -->
     <h1>Padaria do Bairro</h1>
     <!-- Slogan da padaria -->
@@ -49,6 +53,12 @@
   <main>
     <!-- SEÇÃO 1: SOBRE A PADARIA -->
     <section>
+      <!-- Logo da Padaria do Bairro -->
+      <img class="logo" src="./images/logo/logo-padaria-do-bairro.png"
+        alt="Logo da Padaria do Bairro, com uma imagem estilizada de um pão fresco e o nome da padaria em letras brancas, transmitindo tradição e qualidade.">
+
+
+
       <!-- Subtítulo de nível 2 para seção principal -->
       <h2>Sobre Nós</h2>
 
@@ -68,7 +78,9 @@
       <!-- Parágrafo 4: Convite para visita -->
       <p>Venha nos visitar e descubra o sabor da tradição!</p>
       <!-- Imagem de destaque da padaria -->
-        <img src="./images//imagens-site/banner-sobre-nos.png" width="100%" alt="Interior acolhedor da Padaria do Bairro, com uma grande variedade de pães frescos, croissants e doces em exposição, sob uma iluminação quente e convidativa.">
+      <img src="./images//imagens-site/banner-sobre-nos.png" width="100%"
+        alt="Interior acolhedor da Padaria do Bairro, com uma grande variedade de pães frescos, croissants e doces em exposição, sob uma iluminação quente e convidativa.">
+
     </section>
 
     <!-- SEÇÃO 2: PRODUTOS OFERECIDOS -->
@@ -99,6 +111,12 @@
       <!-- Parágrafo sobre serviços adicionais -->
       <p>Além dos produtos tradicionais, também oferecemos encomendas especiais para festas, eventos corporativos e
         celebrações familiares. Consulte-nos sobre bolos personalizados e salgados para eventos.</p>
+
+      <!-- Vídeo institucional sobre os produtos -->
+      <video style="display: block; margin: 0 auto;" width="713" height="401" controls muted autoplay loop>
+        <source src="./video/institucional.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
     </section>
 
     <!-- GALERIA DE IMAGENS DE PRODUTOS -->
@@ -107,171 +125,185 @@
       <h2>Galeria de Produtos</h2>
 
       <!-- Parágrafo introdutório sobre a galeria -->
-      <p>Confira algumas das delícias que preparamos com tanto carinho para você:</p>
+      <p>Conheça a nossa padaria e confira algumas das delícias que preparamos com tanto carinho para você:</p>
 
-      <!-- Galeria de imagens com produtos -->
-      <div class="gallery">
-        <!-- Imagem de um bolo de chocolate -->
-        <img src="./images/produtos/bolo-chocolate.png" alt="Bolo de chocolate com cobertura cremosa, decorado com raspas de chocolate, morangos e frutas frescas.">
-        <!-- Imagem de xicara de café -->
-        <img src="./images/produtos/cafe-preto.png" alt="Café preto servido em uma xícara de vidro transparente, com pessoas ao fundo.">
-        <!-- Imagem de um croissant -->
-        <img src="./images//produtos/crossaint.png" alt="Croissant folhado, com uma textura leve e recheio de chocolate derretido.">
-        <!-- Imagem de uma torta de frango -->
-        <img src="./images/produtos/donuts.png" alt="donuts coloridos com cobertura de chocolate e confeitos coloridos, dispostos em uma bandeja.">
-      </div>
-      <!-- Fim da galeria de imagens -->
+      <section id="galeria">
+        <!-- Galeria de imagens com produtos e fotos do ambiente -->
+        <div class="gallery">
+          <!-- imagem da Fachada da Padaria -->
+          <img src="./images/ambiente/fachada.png" width="50%"
+            alt="Fachada da padaria do bairro, paredes brancas com ambiente acolhedor">
+          <!-- Imagem de um bolo de chocolate -->
+          <img src="./images/produtos/bolo-chocolate.png"
+            alt="Bolo de chocolate com cobertura cremosa, decorado com raspas de chocolate, morangos e frutas frescas.">
+          <!-- Imagem de xicara de café -->
+          <img src="./images/produtos/cafe-preto.png"
+            alt="Café preto servido em uma xícara de vidro transparente, com pessoas ao fundo.">
+          <!-- Imagem de um croissant -->
+          <img src="./images//produtos/crossaint.png"
+            alt="Croissant folhado, com uma textura leve e recheio de chocolate derretido.">
+          <!-- Imagem de uma torta de frango -->
+          <img src="./images/produtos/donuts.png"
+            alt="donuts coloridos com cobertura de chocolate e confeitos coloridos, dispostos em uma bandeja.">
 
-
-    <!-- Adaptação do cardápio em tabela responsiva -->
-    <section id="cardapio">
-      <div class="container">
-        <h2>📋 Cardápio de Produtos</h2>
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Categoria</th>
-                <th>Produto</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="categoria">Pães</td>
-                <td>Pão Francês</td>
-                <td>Pãozinho crocante, assado no forno a lenha</td>
-                <td class="preco">R$ 0,80</td>
-              </tr>
-              <tr>
-                <td class="categoria">Pães</td>
-                <td>Pão de Açúcar</td>
-                <td>Pão doce tradicional com açúcar cristal</td>
-                <td class="preco">R$ 1,20</td>
-              </tr>
-              <tr>
-                <td class="categoria">Pães</td>
-                <td>Croissant</td>
-                <td>Massa folhada artesanal, crocante por fora</td>
-                <td class="preco">R$ 3,50</td>
-              </tr>
-              <tr>
-                <td class="categoria">Pães</td>
-                <td>Pão Integral</td>
-                <td>Com grãos e sementes, rico em fibras</td>
-                <td class="preco">R$ 8,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Doces</td>
-                <td>Bolo de Chocolate</td>
-                <td>Massa fofinha com cobertura de chocolate</td>
-                <td class="preco">R$ 25,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Doces</td>
-                <td>Torta de Morango</td>
-                <td>Base crocante com creme e morangos frescos</td>
-                <td class="preco">R$ 32,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Doces</td>
-                <td>Brigadeiro Gourmet</td>
-                <td>Feito com chocolate belga premium</td>
-                <td class="preco">R$ 3,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Doces</td>
-                <td>Pudim de Leite</td>
-                <td>Receita da vovó com calda caramelizada</td>
-                <td class="preco">R$ 18,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Salgados</td>
-                <td>Coxinha</td>
-                <td>Frango desfiado temperado, massa sequinha</td>
-                <td class="preco">R$ 4,50</td>
-              </tr>
-              <tr>
-                <td class="categoria">Salgados</td>
-                <td>Pastel de Queijo</td>
-                <td>Massa crocante recheada com queijo derretido</td>
-                <td class="preco">R$ 5,90</td>
-              </tr>
-              <tr>
-                <td class="categoria">Salgados</td>
-                <td>Esfirra de Carne</td>
-                <td>Massa árabe com recheio de carne temperada</td>
-                <td class="preco">R$ 6,50</td>
-              </tr>
-              <tr>
-                <td class="categoria">Bebidas</td>
-                <td>Café Expresso</td>
-                <td>Grãos selecionados, torra especial</td>
-                <td class="preco">R$ 3,50</td>
-              </tr>
-            </tbody>
-          </table>
+          <img src="./images/ambiente/interior.png" width="50%"
+            alt="ambiente acolhedor com iluminação de mesa com pães variados com clientes ao fundo">
         </div>
-      </div>
-    </section>
+        <!-- Fim da galeria de imagens -->
+      </section>
 
 
-    <!-- SEÇÃO 3: DIFERENCIAIS DA PADARIA -->
-    <section>
-      <!-- Subtítulo de nível 2 para seção de diferenciais -->
-      <h2>Nossos Diferenciais</h2>
+      <!-- Adaptação do cardápio em tabela responsiva -->
+      <section id="cardapio">
+        <div class="container">
+          <h2>📋 Cardápio de Produtos</h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Produto</th>
+                  <th>Descrição</th>
+                  <th>Preço</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="categoria">Pães</td>
+                  <td>Pão Francês</td>
+                  <td>Pãozinho crocante, assado no forno a lenha</td>
+                  <td class="preco">R$ 0,80</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Pães</td>
+                  <td>Pão de Açúcar</td>
+                  <td>Pão doce tradicional com açúcar cristal</td>
+                  <td class="preco">R$ 1,20</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Pães</td>
+                  <td>Croissant</td>
+                  <td>Massa folhada artesanal, crocante por fora</td>
+                  <td class="preco">R$ 3,50</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Pães</td>
+                  <td>Pão Integral</td>
+                  <td>Com grãos e sementes, rico em fibras</td>
+                  <td class="preco">R$ 8,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Doces</td>
+                  <td>Bolo de Chocolate</td>
+                  <td>Massa fofinha com cobertura de chocolate</td>
+                  <td class="preco">R$ 25,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Doces</td>
+                  <td>Torta de Morango</td>
+                  <td>Base crocante com creme e morangos frescos</td>
+                  <td class="preco">R$ 32,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Doces</td>
+                  <td>Brigadeiro Gourmet</td>
+                  <td>Feito com chocolate belga premium</td>
+                  <td class="preco">R$ 3,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Doces</td>
+                  <td>Pudim de Leite</td>
+                  <td>Receita da vovó com calda caramelizada</td>
+                  <td class="preco">R$ 18,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Salgados</td>
+                  <td>Coxinha</td>
+                  <td>Frango desfiado temperado, massa sequinha</td>
+                  <td class="preco">R$ 4,50</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Salgados</td>
+                  <td>Pastel de Queijo</td>
+                  <td>Massa crocante recheada com queijo derretido</td>
+                  <td class="preco">R$ 5,90</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Salgados</td>
+                  <td>Esfirra de Carne</td>
+                  <td>Massa árabe com recheio de carne temperada</td>
+                  <td class="preco">R$ 6,50</td>
+                </tr>
+                <tr>
+                  <td class="categoria">Bebidas</td>
+                  <td>Café Expresso</td>
+                  <td>Grãos selecionados, torra especial</td>
+                  <td class="preco">R$ 3,50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
-      <!-- Parágrafo introdutório sobre os diferenciais -->
-      <p>O que nos torna únicos no bairro vai muito além dos nossos produtos. É o conjunto de valores e práticas que
-        cultivamos ao longo de quase 40 anos de tradição:</p>
 
-      <!-- Lista não-ordenada (UL) com diferenciais da padaria -->
-      <ul>
-        <li>Ingredientes frescos diários - selecionamos fornecedores locais de confiança</li>
-        <li>Receitas tradicionais - guardamos segredos de família passados por gerações</li>
-        <li>Atendimento personalizado - conhecemos nossos clientes pelo nome</li>
-        <li>Produtos artesanais - tudo feito à mão com técnicas tradicionais</li>
-        <li>Compromisso com a qualidade - nunca vendemos produtos do dia anterior</li>
-        <li>Preços justos - qualidade premium com valores acessíveis</li>
-        <li>Tradição familiar - três gerações dedicadas à panificação</li>
-      </ul>
-    </section>
+      <!-- SEÇÃO 3: DIFERENCIAIS DA PADARIA -->
+      <section>
+        <!-- Subtítulo de nível 2 para seção de diferenciais -->
+        <h2>Nossos Diferenciais</h2>
 
-    <!-- SEÇÃO 4: LOCALIZAÇÃO E INFORMAÇÕES PRÁTICAS -->
-    <section>
-      <!-- Subtítulo de nível 2 para seção de localização -->
-      <h2>Localização e Horários</h2>
+        <!-- Parágrafo introdutório sobre os diferenciais -->
+        <p>O que nos torna únicos no bairro vai muito além dos nossos produtos. É o conjunto de valores e práticas que
+          cultivamos ao longo de quase 40 anos de tradição:</p>
 
-      <!-- Parágrafo com informações sobre localização -->
-      <p>Estamos localizados no coração do bairro, na Rua das Flores, 123. Nossa localização privilegiada permite fácil
-        acesso tanto a pé quanto de carro, com estacionamento disponível na frente da loja.</p>
+        <!-- Lista não-ordenada (UL) com diferenciais da padaria -->
+        <ul>
+          <li>Ingredientes frescos diários - selecionamos fornecedores locais de confiança</li>
+          <li>Receitas tradicionais - guardamos segredos de família passados por gerações</li>
+          <li>Atendimento personalizado - conhecemos nossos clientes pelo nome</li>
+          <li>Produtos artesanais - tudo feito à mão com técnicas tradicionais</li>
+          <li>Compromisso com a qualidade - nunca vendemos produtos do dia anterior</li>
+          <li>Preços justos - qualidade premium com valores acessíveis</li>
+          <li>Tradição familiar - três gerações dedicadas à panificação</li>
+        </ul>
+      </section>
 
-      <!-- Subtítulo de nível 3 para subseção de horários -->
-      <h3>Horários de Funcionamento</h3>
+      <!-- SEÇÃO 4: LOCALIZAÇÃO E INFORMAÇÕES PRÁTICAS -->
+      <section>
+        <!-- Subtítulo de nível 2 para seção de localização -->
+        <h2>Localização e Horários</h2>
 
-      <!-- Parágrafo introdutório sobre os horários -->
-      <p>Para melhor atendê-los, funcionamos em horários ampliados durante a semana:</p>
+        <!-- Parágrafo com informações sobre localização -->
+        <p>Estamos localizados no coração do bairro, na Rua das Flores, 123. Nossa localização privilegiada permite
+          fácil
+          acesso tanto a pé quanto de carro, com estacionamento disponível na frente da loja.</p>
 
-      <!-- Lista ordenada (OL) com horários de funcionamento -->
-      <ol>
-        <li>Segunda a Sexta: 6h às 19h</li>
-        <li>Sábado: 6h às 18h</li>
-        <li>Domingo: 7h às 12h</li>
-        <li>Feriados: consultar funcionamento especial</li>
-      </ol>
+        <!-- Subtítulo de nível 3 para subseção de horários -->
+        <h3>Horários de Funcionamento</h3>
 
-      <!-- Parágrafo com informações sobre horários de pico -->
-      <p>Durante os horários de pico (7h às 9h e 17h às 19h), recomendamos paciência, pois priorizamos a qualidade do
-        atendimento. Para encomendas especiais, sugerimos fazer o pedido com antecedência mínima de 24 horas.</p>
+        <!-- Parágrafo introdutório sobre os horários -->
+        <p>Para melhor atendê-los, funcionamos em horários ampliados durante a semana:</p>
 
-      <!-- Subtítulo de nível 3 para subseção de como chegar -->
-      <h3>Como Chegar</h3>
+        <!-- Lista ordenada (OL) com horários de funcionamento -->
+        <ol>
+          <li>Segunda a Sexta: 6h às 19h</li>
+          <li>Sábado: 6h às 18h</li>
+          <li>Domingo: 7h às 12h</li>
+          <li>Feriados: consultar funcionamento especial</li>
+        </ol>
 
-      <!-- Parágrafo com instruções de como chegar -->
-      <p>Localizada na Rua das Flores, 123, próximo à praça central do bairro. Ponto de referência: em frente ao banco e
-        ao lado da farmácia. Transporte público: linhas 15, 23 e 47 param a duas quadras da padaria.</p>
-    </section>
+        <!-- Parágrafo com informações sobre horários de pico -->
+        <p>Durante os horários de pico (7h às 9h e 17h às 19h), recomendamos paciência, pois priorizamos a qualidade do
+          atendimento. Para encomendas especiais, sugerimos fazer o pedido com antecedência mínima de 24 horas.</p>
+
+        <!-- Subtítulo de nível 3 para subseção de como chegar -->
+        <h3>Como Chegar</h3>
+
+        <!-- Parágrafo com instruções de como chegar -->
+        <p>Localizada na Rua das Flores, 123, próximo à praça central do bairro. Ponto de referência: em frente ao banco
+          e
+          ao lado da farmácia. Transporte público: linhas 15, 23 e 47 param a duas quadras da padaria.</p>
+      </section>
   </main>
   <!-- Fim do conteúdo principal -->
 

@@ -235,11 +235,17 @@ p {
 }
 
 /* IMAGENS */
+
+.logo {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;    
+    
+}
 img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: var(--sombra-suave);
+    height: auto ;
+    border-radius: 8px;    
     margin: 1.5rem 0;
 }
 
