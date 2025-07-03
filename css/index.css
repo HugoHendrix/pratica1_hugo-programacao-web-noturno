@@ -1,7 +1,8 @@
 /* FOLHA DE ESTILOS CSS */
 
-/* IMPORTAÇÃO DE FONTES DO GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+/* IMPORTAÇÃO DE FONTES DO GOOGLE FONTS : Títulos: Merriweather / Corpo: Lato*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Share+Tech+Mono&display=swap');
 
 /* RESET E CONFIGURAÇÕES GLOBAIS */
 * {
@@ -38,8 +39,8 @@
     --cor-cinza-escuro: #333333;
 
     /* Fontes */
-    --fonte-titulo: 'Playfair Display', serif;
-    --fonte-texto: 'Inter', sans-serif;
+    --fonte-titulo: 'Merriweather', serif;
+    --fonte-texto: 'Lato', sans-serif;
 
     /* Sombras */
     --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -115,7 +116,7 @@ header::before {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: url('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=100&h=100&fit=crop') repeat;
+    background: url('../images/imagens-site/banner-principal.png') repeat;
     opacity: 0.1;
     animation: float 6s ease-in-out infinite;
 }
@@ -134,10 +135,10 @@ header::before {
 
 header h1 {
     font-family: var(--fonte-titulo);
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1;
 }
@@ -219,12 +220,34 @@ h3 {
 }
 
 /* PARÁGRAFOS */
+
+.slogan {
+    text-align: center;
+    font-size: 2rem;
+}
+
 p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.2rem;
     text-align: justify;
     color: var(--cor-cinza-escuro);
+}
+
+/* IMAGENS */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    margin: 1.5rem 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 /* LISTAS */
@@ -309,6 +332,14 @@ section:nth-child(4) ul li::before {
     border-radius: 8px;
 }
 
+/* 
+    Tabela de Estilos:
+    Este bloco de CSS define os estilos visuais para a tabela da página,
+    incluindo formatação de bordas, espaçamento, cores de fundo e texto,
+    além de estilos para cabeçalhos e células. 
+    Ideal para melhorar a legibilidade e a apresentação dos dados tabulares.
+*/
+/*  */
 table {
     width: 100%;
     border-collapse: collapse;
