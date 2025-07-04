@@ -373,24 +373,24 @@ th {
 }
 
 tbody tr:hover {
-    background-color: #f9f7f4;
+    background-color: var(--cor-creme);
 }
 
 .categoria {
     font-weight: bold;
-    color: #8B4513;
+    color: var(--cor-chocolate);
 }
 
 .preco {
     font-weight: bold;
-    color: #2E8B57;
+    color: var(--cor-verde-suave);
     text-align: right;
 }
 
 /* RODAPÉ */
 footer {
-    background: linear-gradient(135deg, var(--cor-chocolate) 0%, var(--cor-canela) 100%);
-    color: var(--cor-branco);
+    background: linear-gradient(135deg, var(--cor-pao) 0%, var(--cor-canela) 100%);
+    color: var(--cor-creme);
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="shortcut icon" href="./images/imagens-site/favicon.png" type="image/x-icon">
+    <title>Contato - Padaria do Bairro</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>💬 Fale Conosco</h1>
+            <p>Estamos aqui para ajudar você!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Voltar ao Site</a>
+        
+        <div class="contact-info">
+            <h3>📞 Outras Formas de Contato</h3>
+            <p><strong>Telefone:</strong> (11) 3456-7890</p>
+            <p><strong>WhatsApp:</strong> (11) 99876-5432</p>
+            <p><strong>Email:</strong> contato@padariadobairro.com.br</p>
+            <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
+        </div>
+
+        <div class="form-container">
+            <h2>📝 Formulário de Contato</h2>
+            <p class="form-intro">
+                Preencha o formulário abaixo e entraremos em contato o mais breve possível.
+                Campos com <span class="required">*</span> são obrigatórios.
+            </p>
+
+            <form action="#" method="POST" novalidate>
+                <fieldset>
+                    <legend>📋 Informações de Contato</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome">
+                            👤 Nome Completo <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            required 
+                            minlength="2"
+                            maxlength="100"
+                            placeholder="Digite seu nome completo"
+                        >
+                        <div class="form-hint">Digite seu nome completo para que possamos te atender melhor</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            📧 Email <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="seu@email.com"
+                        >
+                        <div class="form-hint">Utilizaremos este email para responder sua mensagem</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">
+                            📞 Telefone
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            pattern="[0-9\s\(\)\-\+]{10,15}"
+                            placeholder="(11) 99999-9999"
+                        >
+                        <div class="form-hint">Opcional - Para contato mais rápido</div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>💬 Sua Mensagem</legend>
+                    
+                    <div class="form-group">
+                        <label for="assunto">
+                            📋 Assunto <span class="required">*</span>
+                        </label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione o assunto</option>
+                            <option value="informacoes">ℹ️ Informações gerais</option>
+                            <option value="reclamacao">⚠️ Reclamação</option>
+                            <option value="sugestao">💡 Sugestão</option>
+                            <option value="elogio">🌟 Elogio</option>
+                            <option value="pedido">🎂 Pedido especial</option>
+                            <option value="outros">❓ Outros</option>
+                        </select>
+                        <div class="form-hint">Escolha o assunto que melhor descreve sua mensagem</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">
+                            ✍️ Mensagem <span class="required">*</span>
+                        </label>
+                        <textarea 
+                            id="mensagem" 
+                            name="mensagem" 
+                            required 
+                            minlength="10"
+                            maxlength="1000"
+                            placeholder="Digite sua mensagem aqui... (mínimo 10 caracteres)"
+                        ></textarea>
+                        <div class="form-hint">Descreva detalhadamente sua solicitação ou dúvida</div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">
+                    📤 Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Padaria do Bairro - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Validação personalizada do formulário
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value.trim();
+            
+            if (!nome || !email || !assunto || !mensagem) {
+                alert('❌ Por favor, preencha todos os campos obrigatórios!');
+                return;
+            }
+            
+            if (mensagem.length < 10) {
+                alert('❌ A mensagem deve ter pelo menos 10 caracteres!');
+                return;
+            }
+            
+            // Simulação de envio bem-sucedido
+            alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            
+            // Opcional: limpar o formulário
+            this.reset();
+        });
+
+        // Contador de caracteres para textarea
+        const textarea = document.getElementById('mensagem');
+        const hint = textarea.nextElementSibling;
+        
+        textarea.addEventListener('input', function() {
+            const current = this.value.length;
+            const max = this.getAttribute('maxlength');
+            hint.textContent = `${current}/${max} caracteres - Descreva detalhadamente sua solicitação ou dúvida`;
+        });
+    </script>
+</body>
+</html>
